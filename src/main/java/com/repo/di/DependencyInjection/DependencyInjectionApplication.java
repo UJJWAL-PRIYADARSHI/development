@@ -17,7 +17,7 @@ public class DependencyInjectionApplication {
 		ApplicationContext context = SpringApplication.run(DependencyInjectionApplication.class, args);
 		
 		ContextController contextController = (ContextController)context.getBean("contextController");
-		contextController.sayHello();
+		contextController.calling();
 		
 		NSPropertyInjectionController propertyController = (NSPropertyInjectionController)context.getBean("NSPropertyInjectionController");
 		propertyController.calling();
