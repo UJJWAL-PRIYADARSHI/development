@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 
 import com.repo.di.DependencyInjection.controller.ContextController;
+import com.repo.di.DependencyInjection.controller.I18nController;
 import com.repo.di.DependencyInjection.controller.NSConstructorInjectionController;
 import com.repo.di.DependencyInjection.controller.NSPropertyInjectionController;
 import com.repo.di.DependencyInjection.controller.NSSetterInjectionController;
@@ -27,6 +28,9 @@ public class DependencyInjectionApplication {
 		
 		NSConstructorInjectionController constructorInjectionController = (NSConstructorInjectionController) context.getBean("NSConstructorInjectionController");
 		constructorInjectionController.calling();
+		
+		I18nController i18nController = (I18nController) context.getBean("i18nController");
+		i18nController.calling();
 	}
 
 }
